@@ -9,6 +9,7 @@ public interface BookService {
 
     ArrayList<String> listCategory();
     ArrayList<String> listBooks();
+    ArrayList<String> listMetaData();
     String searchByCategory(String category);
     String searchByTitle(String title);
     String searchByAuthor(String author);

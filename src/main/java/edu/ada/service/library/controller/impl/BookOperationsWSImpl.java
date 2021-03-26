@@ -1,7 +1,6 @@
 package edu.ada.service.library.controller.impl;
 
 import edu.ada.service.library.controller.BookOperationsWS;
-import edu.ada.service.library.model.entity.BookEntity;
 import edu.ada.service.library.service.BookService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,6 +42,18 @@ public class BookOperationsWSImpl implements BookOperationsWS {
         ArrayList<String> bookTitles = bookService.listBooks();
         String temp = "Books:\n";
         for (String i:bookTitles) {
+            temp += i +"\n";
+        }
+        return ResponseEntity.ok(temp);
+    }
+
+
+    @Override
+    @RequestMapping(value = "/metadata", method = RequestMethod.GET)
+    public ResponseEntity listMetaData() {
+        ArrayList<String> metaData = bookService.listMetaData();
+        String temp = "Meta Data:\n";
+        for (String i:metaData) {
             temp += i +"\n";
         }
         return ResponseEntity.ok(temp);

@@ -9,5 +9,5 @@ public interface BookOperationsWS {
     ResponseEntity searchByCategory(String category);
     ResponseEntity searchByTitle(String title);
     ResponseEntity searchByAuthor(String author);
-
+    ResponseEntity listMetaData();
 }

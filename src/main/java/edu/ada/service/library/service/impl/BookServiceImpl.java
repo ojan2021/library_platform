@@ -27,6 +27,12 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
+    public ArrayList<String> listMetaData() {
+        ArrayList<String> metaData = bookRepository.findMetaData();
+        return metaData;
+    }
+
+    @Override
     public String searchByCategory(String category) {
         return null;
     }

@@ -26,5 +26,5 @@ VALUES
 (3, 'Franny and Zooey','Sci-Fi','cccccc','11.12.2008','AVAILABLE'),
 (4, 'The Great Gatsby','Literature','bbbb','23.12.2101','AVAILABLE'),
 (5, 'Tender id the Night','Detective','aaaaaaa','10.09.2003','AVAILABLE'),
-(6, 'Pride and Prejudice','History','hhhhhhh','1.02.2245','AVAILABLE')
+(6, 'Pride and Prejudice','History','hhhhhhh','01.02.2245','AVAILABLE')
 ;

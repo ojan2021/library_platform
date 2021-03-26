@@ -18,6 +18,9 @@ public interface BookRepository extends CrudRepository<BookEntity, Long> {
     @Query(value = "SELECT title FROM books",nativeQuery = true)
     ArrayList<String> findBookTitles();
 
+    @Query(value = "SELECT title, category, author, publish_date, availability FROM books",nativeQuery = true)
+    ArrayList<String> findMetaData();
+
     BookEntity findAllByCategory(String category);
     BookEntity findAllByTitle(String title);
     BookEntity findAllByAuthor(String author);
