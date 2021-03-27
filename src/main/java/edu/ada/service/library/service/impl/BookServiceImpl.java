@@ -16,34 +16,31 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public ArrayList<String> listCategory() {
-        ArrayList<String> categories = bookRepository.findCategories();
-        return categories;
+        return bookRepository.findCategories();
     }
 
     @Override
     public ArrayList<String> listBooks() {
-        ArrayList<String> bookTitles = bookRepository.findBookTitles();
-        return bookTitles;
+        return bookRepository.findBookTitles();
     }
 
     @Override
     public ArrayList<String> listMetaData() {
-        ArrayList<String> metaData = bookRepository.findMetaData();
-        return metaData;
+        return bookRepository.findMetaData();
     }
 
     @Override
-    public String searchByCategory(String category) {
-        return null;
+    public BookEntity searchByCategory(String category) {
+        return bookRepository.findAllByCategory(category);
     }
 
     @Override
-    public String searchByTitle(String title) {
-        return null;
+    public BookEntity searchByTitle(String title) {
+        return bookRepository.findAllByTitle(title);
     }
 
     @Override
-    public String searchByAuthor(String author) {
-        return null;
+    public BookEntity searchByAuthor(String author) {
+        return bookRepository.findAllByAuthor(author);
     }
 }

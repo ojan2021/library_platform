@@ -63,20 +63,20 @@ public class BookOperationsWSImpl implements BookOperationsWS {
     @RequestMapping(value = "/sbc", method = RequestMethod.GET)
     public ResponseEntity searchByCategory(
             @RequestHeader("category") String category) {
-        return null;
+        return ResponseEntity.ok(bookService.searchByCategory(category));
     }
 
     @Override
     @RequestMapping(value = "/sbt", method = RequestMethod.GET)
     public ResponseEntity searchByTitle(
             @RequestHeader("title") String title) {
-        return null;
+        return ResponseEntity.ok(bookService.searchByTitle(title));
     }
 
     @Override
     @RequestMapping(value = "/sba", method = RequestMethod.GET)
     public ResponseEntity searchByAuthor(
             @RequestHeader("author") String author) {
-        return null;
+        return ResponseEntity.ok(bookService.searchByAuthor(author));
     }
 }

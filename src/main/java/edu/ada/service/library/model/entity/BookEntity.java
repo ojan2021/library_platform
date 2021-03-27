@@ -74,4 +74,5 @@ public class BookEntity {
     public void setAvailability(String availability) {
         this.availability = availability;
     }
+
 }
