@@ -1,7 +1,7 @@
 # Library Platform
 ### Necessary queries for the database
 ```sh
-*https://pastebin.com/9abie415
+https://pastebin.com/9abie415
 ```
 ### Endpoint for Register:
 * Use POST method
