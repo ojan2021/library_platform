@@ -25,6 +25,11 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
+    public ArrayList<String> listAvailableBooks() {
+        return bookRepository.findAvailableBooks();
+    }
+
+    @Override
     public ArrayList<String> listMetaData() {
         return bookRepository.findMetaData();
     }

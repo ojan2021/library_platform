@@ -47,6 +47,18 @@ public class BookOperationsWSImpl implements BookOperationsWS {
         return ResponseEntity.ok(temp);
     }
 
+    @Override
+    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
+    @RequestMapping(value = "/available_books", method = RequestMethod.GET)
+    public ResponseEntity listAvailableBooks() {
+        ArrayList<String> availableBooks = bookService.listAvailableBooks();
+        String temp = "Books:\n";
+        for (String i:availableBooks) {
+            temp += i +"\n";
+        }
+        return ResponseEntity.ok(temp);
+    }
+
 
     @Override
     @RequestMapping(value = "/metadata", method = RequestMethod.GET)

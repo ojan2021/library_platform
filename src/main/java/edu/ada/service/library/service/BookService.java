@@ -8,6 +8,7 @@ public interface BookService {
 
     ArrayList<String> listCategory();
     ArrayList<String> listBooks();
+    ArrayList<String> listAvailableBooks();
     ArrayList<String> listMetaData();
     BookEntity searchByCategory(String category);
     BookEntity searchByTitle(String title);
