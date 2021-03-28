@@ -1,5 +1,6 @@
 # Library Platform
 ### Necessary queries for the database
+- Make sure that you have executed these queries before deployment
 ```sh
 https://pastebin.com/nWL3wJUT
 ```
