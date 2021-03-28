@@ -25,13 +25,23 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public ArrayList<String> listAvailableBooks() {
-        return bookRepository.findAvailableBooks();
+    public ArrayList<String> listPickedUpBooks() {
+        return bookRepository.findPickedUpBooks();
     }
 
     @Override
     public ArrayList<String> listMetaData() {
         return bookRepository.findMetaData();
+    }
+
+    @Override
+    public void pickup(String username, String title) {
+        bookRepository.pickupBook(username,title);
+    }
+
+    @Override
+    public void dropoff(String title) {
+        bookRepository.dropoffBook(title);
     }
 
     @Override

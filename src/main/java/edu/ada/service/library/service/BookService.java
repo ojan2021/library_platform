@@ -8,8 +8,10 @@ public interface BookService {
 
     ArrayList<String> listCategory();
     ArrayList<String> listBooks();
-    ArrayList<String> listAvailableBooks();
+    ArrayList<String> listPickedUpBooks();
     ArrayList<String> listMetaData();
+    void pickup(String username, String title);
+    void dropoff(String title);
     BookEntity searchByCategory(String category);
     BookEntity searchByTitle(String title);
     BookEntity searchByAuthor(String author);
