@@ -2,10 +2,7 @@ package edu.ada.service.library.controller.impl;
 
 import edu.ada.service.library.controller.BookOperationsWS;
 import edu.ada.service.library.security.jwt.JwtUtils;
-import edu.ada.service.library.security.services.UserDetailsImpl;
 import edu.ada.service.library.service.BookService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
